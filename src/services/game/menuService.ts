@@ -1,28 +1,18 @@
 import type { MenuActionId } from '@config/menuConfig'
 
-export interface MenuActionHandlers {
-  onNewGame: () => void
-  onRules: () => void
-  onOptions: () => void
-  onQuit: () => void
-}
-
-export function runMenuAction(actionId: MenuActionId, handlers: MenuActionHandlers): void {
+export function getRouteForAction(actionId: MenuActionId): string {
   if (actionId === 'new-game') {
-    handlers.onNewGame()
-    return
+    return '/menu/new-game'
   }
 
   if (actionId === 'rules') {
-    handlers.onRules()
-    return
+    return '/menu/rules'
   }
 
   if (actionId === 'options') {
-    handlers.onOptions()
-    return
+    return '/menu/options'
   }
 
-  handlers.onQuit()
+  return '/'
 }
 

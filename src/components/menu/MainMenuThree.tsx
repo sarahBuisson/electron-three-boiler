@@ -1,11 +1,12 @@
 import { OrbitControls, Text } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { MENU_ITEMS, type MenuActionId } from '@config/menuConfig'
+import { MENU_ITEMS } from '@config/menuConfig'
 import type { Keybinds } from '@models/Keybinds'
 import { Suspense, useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 interface MainMenuThreeProps {
   keybinds: Keybinds
-  onAction: (id: MenuActionId) => void
 }
 
 interface ThreeMenuButtonProps {
@@ -39,9 +40,10 @@ function ThreeMenuButton({ label, position, active, onHover, onClick }: ThreeMen
   )
 }
 
-export function MainMenuThree({ keybinds, onAction }: MainMenuThreeProps) {
+export function MainMenuThree({ keybinds }: MainMenuThreeProps) {
   void keybinds
   const [activeIndex, setActiveIndex] = useState(0)
+  const navigate = useNavigate()
 
   const positions = useMemo<[number, number, number][]>(
     () => MENU_ITEMS.map((_, index) => [0, 1.2 - index * 0.95, 0]),
@@ -59,7 +61,7 @@ export function MainMenuThree({ keybinds, onAction }: MainMenuThreeProps) {
             position={positions[index]}
             active={activeIndex === index}
             onHover={() => setActiveIndex(index)}
-            onClick={() => onAction(item.id)}
+            onClick={() => navigate(item.route)}
           />
         ))}
 
