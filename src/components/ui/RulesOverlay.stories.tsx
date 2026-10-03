@@ -1,3 +1,4 @@
+// eslint-disable-next-line storybook/no-renderer-packages
 import type { Meta, StoryObj } from '@storybook/react'
 import { RulesOverlay } from './RulesOverlay'
 
@@ -24,7 +25,7 @@ const defaultKeybinds = {
   up: 'ArrowUp',
   down: 'ArrowDown',
   confirm: 'Enter',
-  cancel: 'Escape',
+  close: 'Escape',
 }
 
 export const Closed: Story = {

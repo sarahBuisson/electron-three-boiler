@@ -1,13 +1,13 @@
 export interface Keybinds {
-  menuUp: string
-  menuDown: string
+  up: string
+  down: string
   confirm: string
   close: string
 }
 
 export const DEFAULT_KEYBINDS: Keybinds = {
-  menuUp: 'ArrowUp',
-  menuDown: 'ArrowDown',
+  up: 'ArrowUp',
+  down: 'ArrowDown',
   confirm: 'Enter',
   close: 'Escape',
 }

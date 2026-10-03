@@ -5,11 +5,11 @@ export function isConfirmKey(key: string, keybinds: Keybinds): boolean {
 }
 
 export function isMenuUpKey(key: string, keybinds: Keybinds): boolean {
-  return key === keybinds.menuUp || key.toLowerCase() === 'w'
+  return key === keybinds.up || key.toLowerCase() === 'w'
 }
 
 export function isMenuDownKey(key: string, keybinds: Keybinds): boolean {
-  return key === keybinds.menuDown || key.toLowerCase() === 's'
+  return key === keybinds.down || key.toLowerCase() === 's'
 }
 
 export function isCloseKey(key: string, keybinds: Keybinds): boolean {
