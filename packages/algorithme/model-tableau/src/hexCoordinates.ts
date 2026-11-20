@@ -60,7 +60,7 @@ export function hexAxialToOrthoPointyTop(q: number, r: number, R: number): Ortho
 export function hexToOrtho(
   q: number,
   r: number,
-  R: number,
+  R: number=1,
   orientation: 'flat-top' | 'pointy-top' = 'flat-top',
 ): OrthoCoords {
   return orientation === 'pointy-top'

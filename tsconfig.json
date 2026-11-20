@@ -1,12 +1,32 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" },
-    { "path": "./packages/exemple-lib1" },
-    { "path": "./packages/exemple-lib2" },
-    { "path": "./packages/algorithme/model-tableau" },
-    { "path": "./packages/three/geo-model" },
-    { "path": "./packages/three/material/CustomDistanceMaterial" }
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./packages/exemple-lib1"
+    },
+    {
+      "path": "./packages/exemple-lib2"
+    },
+    {
+      "path": "./packages/algorithme/model-tableau"
+    },
+    {
+      "path": "./packages/three/geo-model"
+    },
+    {
+      "path": "./packages/three/SpriteInstances"
+    },
+    {
+      "path": "./packages/three/blob"
+    },
+    {
+      "path": "./packages/three/material/aquarelle"
+    }
   ]
 }

@@ -42,11 +42,15 @@
     "version:geo-model:minor": "npm version minor --workspace=packages/three/geo-model",
     "version:geo-model:major": "npm version major --workspace=packages/three/geo-model",
     "tag:geo-model": "node -e \"const v=require('./packages/three/geo-model/package.json').version; require('child_process').execSync('git tag @electron-three-boiler/geo-model@'+v, {stdio:'inherit'})\"",
-    "version:custom-distance-material": "npm version patch --workspace=packages/three/material/CustomDistanceMaterial",
-    "version:custom-distance-material:minor": "npm version minor --workspace=packages/three/material/CustomDistanceMaterial",
-    "version:custom-distance-material:major": "npm version major --workspace=packages/three/material/CustomDistanceMaterial",
-    "tag:custom-distance-material": "node -e \"const v=require('./packages/three/material/CustomDistanceMaterial/package.json').version; require('child_process').execSync('git tag @electron-three-boiler/custom-distance-material@'+v, {stdio:'inherit'})\"",
-    "release": "git push && git push --tags"
+    "release": "git push && git push --tags",
+    "version:blob": "npm version patch --workspace=packages/three/blob",
+    "version:blob:minor": "npm version minor --workspace=packages/three/blob",
+    "version:blob:major": "npm version major --workspace=packages/three/blob",
+    "tag:blob": "node -e \"const v=require('./packages/three/blob/package.json').version; require('child_process').execSync('git tag @electron-three-boiler/blob@'+v, {stdio:'inherit'})\"",
+    "version:aquarelle": "npm version patch --workspace=packages/three/material/aquarelle",
+    "version:aquarelle:minor": "npm version minor --workspace=packages/three/material/aquarelle",
+    "version:aquarelle:major": "npm version major --workspace=packages/three/material/aquarelle",
+    "tag:aquarelle": "node -e \"const v=require('./packages/three/material/aquarelle/package.json').version; require('child_process').execSync('git tag @electron-three-boiler/aquarelle@'+v, {stdio:'inherit'})\""
   },
   "dependencies": {
     "@emnapi/core": "^1.11.3",
